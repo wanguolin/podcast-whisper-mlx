@@ -1,0 +1,49 @@
+{
+  "metadata": {
+    "title": "Example interview",
+    "source_file": "/absolute/path/to/example.mp4",
+    "source_language": "en",
+    "status": "machine-assisted calibration; human review recommended"
+  },
+  "speakers": [
+    {
+      "id": "SPK01",
+      "display_name": "Host",
+      "confidence": "inferred",
+      "evidence": "Opening role is clear; real identity not verified."
+    },
+    {
+      "id": "SPK02",
+      "display_name": "Guest",
+      "confidence": "unknown",
+      "evidence": "Anonymous diarization label only."
+    }
+  ],
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 3.8,
+      "speaker": "SPK01",
+      "source": "Welcome back to the show.",
+      "calibrated": "Welcome back to the show.",
+      "zh": "欢迎回到节目。",
+      "uncertain": false
+    },
+    {
+      "start": 3.8,
+      "end": 8.2,
+      "speaker": "SPK02",
+      "source": "The figure was maybe fifteen percent.",
+      "calibrated": "The figure was maybe 15 percent.",
+      "zh": "这个数字大概是 15%。",
+      "uncertain": true
+    }
+  ],
+  "unresolved": [
+    {
+      "start": 3.8,
+      "type": "数字待核",
+      "note": "Confirm whether the speaker said 15 or 50 percent."
+    }
+  ]
+}

@@ -1,0 +1,1407 @@
+{
+  "status": "parsed machine output; human review required",
+  "warning": "model_speaker_guess values are untrusted generated names, not verified speaker IDs; they drift within and across chunks",
+  "source": "outputs/allin-e264/moss-chunked/chunk2/transcript.json",
+  "chunk": "chunk2",
+  "offset_seconds": 2400.0,
+  "segment_count": 139,
+  "speaker_guess_counts": {
+    "Brad Gerstner": 17,
+    "Chamath Palihapitiya": 51,
+    "David Friedberg": 46,
+    "Sam Weitz": 1,
+    "Altimeter": 24
+  },
+  "segments": [
+    {
+      "id": 1,
+      "chunk": "chunk2",
+      "relative_start": 0.0,
+      "relative_end": 112.0,
+      "absolute_start": 2400.0,
+      "absolute_end": 2512.0,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "A part of the economy where there's always been a massive supply shortage. And I don't know what the natural limit on that is, but my sense is that there's a tremendous latent demand for the ability to generate code in large quantities, create new products, you know, as the cost of code goes down, as the coding assistants get better, you can put up new types of products. And then, of course, it's going to lead to agents, which is another way of basically using the code that gets generated. So my sense is that this could be very scalable. I don't know where it taps out exactly. Where I think Chamath is right is that I think there is a change management aspect to this in Fortune 500 companies, for example, and they haven't really wrapped their heads around how exactly they're going to use this. There's a McKinsey study that showed that a lot of these pilot projects in Fortune 500 companies were experimental. A lot of them were proving not to be successful. So I do think like, as you go beyond coding into, you know, company transformation, things like that, it becomes a little bit more speculative. That's not to say it won't happen. I think it will happen. I'm actually bullish. But I do think that we're still waiting to see what the breakout use cases beyond coding will be. Probably agents will be the next big one. But I think Brad's right that that's big enough to see, you know, this scale for a while because, you know, the thing about the thing about code is you're paying for code on a metered basis right now. You're paying per token, which is kind of an amazing deal for companies, right? Because before they had to go through this recruiting process to find engineers, source them, vet them, you know, keep them happy, give them all the perks, the kind bars, all, you know. And so to be able to buy code on a metered basis as the cost per token keeps going down, it's kind of an amazing deal."
+    },
+    {
+      "id": 2,
+      "chunk": "chunk2",
+      "relative_start": 112.0,
+      "relative_end": 118.2,
+      "absolute_start": 2512.0,
+      "absolute_end": 2518.2,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Before it was just metered on people. Now, now, to your point, it's metered, it's metered in a different way, but it's still metered."
+    },
+    {
+      "id": 3,
+      "chunk": "chunk2",
+      "relative_start": 118.2,
+      "relative_end": 128.19,
+      "absolute_start": 2518.2,
+      "absolute_end": 2528.19,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "Yeah. And let me just, you know, use this term labor displacement, Brad. That's like the one part where I might disagree with you is because there was such a shortage"
+    },
+    {
+      "id": 4,
+      "chunk": "chunk2",
+      "relative_start": 128.19,
+      "relative_end": 128.69,
+      "absolute_start": 2528.19,
+      "absolute_end": 2528.69,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah."
+    },
+    {
+      "id": 5,
+      "chunk": "chunk2",
+      "relative_start": 128.69,
+      "relative_end": 139.41,
+      "absolute_start": 2528.69,
+      "absolute_end": 2539.41,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "of software engineers. I think when people hear the word labor or term labor displacement, they might start to think that 6 billion of incremental revenue means 6 billion of layoffs."
+    },
+    {
+      "id": 6,
+      "chunk": "chunk2",
+      "relative_start": 139.41,
+      "relative_end": 139.86,
+      "absolute_start": 2539.41,
+      "absolute_end": 2539.86,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "No."
+    },
+    {
+      "id": 7,
+      "chunk": "chunk2",
+      "relative_start": 139.86,
+      "relative_end": 157.53,
+      "absolute_start": 2539.86,
+      "absolute_end": 2557.53,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "And I don't think it does. And the way to thread that needle is the fact that we were artificially constrained in the number of software engineers and how they could be used and how rapidly they could be acquired and all that kind of stuff. So to be able to now turn that on like electricity, I mean, that's kind of what we're talking about."
+    },
+    {
+      "id": 8,
+      "chunk": "chunk2",
+      "relative_start": 157.53,
+      "relative_end": 158.1,
+      "absolute_start": 2557.53,
+      "absolute_end": 2558.1,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Exactly."
+    },
+    {
+      "id": 9,
+      "chunk": "chunk2",
+      "relative_start": 158.1,
+      "relative_end": 163.62,
+      "absolute_start": 2558.1,
+      "absolute_end": 2563.62,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "Is just such a huge game changer and unlock for the whole economy."
+    },
+    {
+      "id": 10,
+      "chunk": "chunk2",
+      "relative_start": 163.62,
+      "relative_end": 164.01,
+      "absolute_start": 2563.62,
+      "absolute_end": 2564.01,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yes."
+    },
+    {
+      "id": 11,
+      "chunk": "chunk2",
+      "relative_start": 164.01,
+      "relative_end": 165.66,
+      "absolute_start": 2564.01,
+      "absolute_end": 2565.66,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "And that's what I think is really exciting about it."
+    },
+    {
+      "id": 12,
+      "chunk": "chunk2",
+      "relative_start": 165.66,
+      "relative_end": 173.49,
+      "absolute_start": 2565.66,
+      "absolute_end": 2573.49,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "It's augmenting, it's augmenting human labor, right? We're not at a place yet where it's displacing. And this is the definition of productivity gains."
+    },
+    {
+      "id": 13,
+      "chunk": "chunk2",
+      "relative_start": 173.49,
+      "relative_end": 196.83,
+      "absolute_start": 2573.49,
+      "absolute_end": 2596.83,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "I'm going to make just two quick points here. The place to look for this actually moving from experimental into production is not, not at big companies. Big companies are actively resisting this. Management in big companies will resist it because it means lowering headcount, and it means the person who implements it might actually implement themselves out of a job. So that is the natural resistance you'll see in big companies. That's not where to look for adoption of new tech."
+    },
+    {
+      "id": 14,
+      "chunk": "chunk2",
+      "relative_start": 196.83,
+      "relative_end": 199.44,
+      "absolute_start": 2596.83,
+      "absolute_end": 2599.44,
+      "model_speaker_guess": "David Friedberg",
+      "text": "That's not why it's happening. That's not why it's being so down."
+    },
+    {
+      "id": 15,
+      "chunk": "chunk2",
+      "relative_start": 199.44,
+      "relative_end": 268.45,
+      "absolute_start": 2599.44,
+      "absolute_end": 2668.45,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "And then you can, you can counter it. Startups are the place to look at this, and that's where I am on the ground. And what I'm seeing there is that startups are using this in production for their legal work, for their marketing, for SDRs, for their accounting, reviewing legal documents. This is all work that would normally, they would hire consultants for, outsource, or make hires for. And what I'm seeing on the ground is it's production ready in startups who are using it in those categories, HR as well, accounting, marketing, all of that, all that blocking and tackling, all those chores are being done currently with these LLMs, and they're doing it in production, and they're doing it at scale. Just a quick second point here. Here's the J curve. And this is the question I think we'll get to in our next segment. When does this become a profitable business? If, and you asked this of Sam in that famous clip on the BG2 podcast, RIP BG2, here you go, the LLM industry J curve. I just asked Claude to make this for me. If you have 500 billion, I think you would agree, it's probably going to be around that number, Brad, invested in all of this, and then"
+    },
+    {
+      "id": 16,
+      "chunk": "chunk2",
+      "relative_start": 268.45,
+      "relative_end": 269.98,
+      "absolute_start": 2668.45,
+      "absolute_end": 2669.98,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "More, lot more."
+    },
+    {
+      "id": 17,
+      "chunk": "chunk2",
+      "relative_start": 269.98,
+      "relative_end": 287.74,
+      "absolute_start": 2669.98,
+      "absolute_end": 2687.74,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Okay, so 5 billion is an underestimate here. And then when do we actually see these large language model companies hit profitability in a, in a calendar year? It took Tesla, Uber, Amazon, you know, decade plus in each of those cases to win back their investment. If you put it at 10 billion."
+    },
+    {
+      "id": 18,
+      "chunk": "chunk2",
+      "relative_start": 287.74,
+      "relative_end": 293.62,
+      "absolute_start": 2687.74,
+      "absolute_end": 2693.62,
+      "model_speaker_guess": "David Friedberg",
+      "text": "This is a really good chart. Here's the precise math on this. So I am building a 1 gigawatt data center in Arizona."
+    },
+    {
+      "id": 19,
+      "chunk": "chunk2",
+      "relative_start": 293.62,
+      "relative_end": 294.52,
+      "absolute_start": 2693.62,
+      "absolute_end": 2694.52,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Okay."
+    },
+    {
+      "id": 20,
+      "chunk": "chunk2",
+      "relative_start": 294.52,
+      "relative_end": 376.95,
+      "absolute_start": 2694.52,
+      "absolute_end": 2776.95,
+      "model_speaker_guess": "David Friedberg",
+      "text": "When I greenlit that project, I thought it was going to be a $4 or $5 billion investment. I was like, okay, whatever. Then it went to 10, then it went to 15, then it went to 20. And now it's upwards of $50 billion for the powered shell, for all the land, for all the permits, then for all the infrastructure, all the people, all of it. Okay. Sarah Fryer said, I think it was about a year ago, maybe less than a year ago, that for them, every gigawatt is about 10 billion of annual revenue. So if you think about that J curve, Jason, really, the way to think about it is, look, energy equals intelligence. For every gigawatt that they're trying to spend, they have a five-year payback is roughly what it means just to get to break even. And then years six, seven, and eight will be where the profit is. Now, how do you shrink the J curve? You have better silicon. We're going to see something from Jensen in a, in a week or two that uses a bunch of the stuff that we partnered with him at Grok on. There'll be other people. There'll be open source. So all those things can shrink the depth and the surface area of that J curve so that you can get out of it faster. But right now, that, that thing is roughly accurate, which is it's about 50 billion per gigawatt, and it's about a five to six year payback just to get into the money, and then it's about 10 billion a year. And the technology industry has to do something to make this better. Could I, though, take a step back and give you just a different framing of all of this?"
+    },
+    {
+      "id": 21,
+      "chunk": "chunk2",
+      "relative_start": 376.95,
+      "relative_end": 378.42,
+      "absolute_start": 2776.95,
+      "absolute_end": 2778.42,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "Please."
+    },
+    {
+      "id": 22,
+      "chunk": "chunk2",
+      "relative_start": 378.42,
+      "relative_end": 494.68,
+      "absolute_start": 2778.42,
+      "absolute_end": 2894.68,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "I think the big thing that we're debating is actually something we've seen in every other technology trend when it started to get some really meaningful traction. So in the first generation of the internet, when you started to see e-commerce and all these other business models, then in the second big wave of the internet around the move to mobile and the move to social, and then now we're seeing this big wave around AI. And I think what happens is in step one, entrepreneurs are A/B testing what it takes to raise money. Okay, that's step one. And I think what has happened is that at least some parts of the AI ecosystem have decided that this crazy, scary doomerism is the best way to raise money, where every now and then they come out and they say, all the jobs will be destroyed. Anthropic, you know, Dario says that. This thing is sentient. And investors are like, okay, here's 10 billion, here's 50 billion, here's 100 billion. But then the second step happens. They get the money, they start to do the training, they start selling, and then the investors are like, hey, where's the revenue? And so then they start selling everywhere. And then if you see in the Department of War example, all of a sudden you flip flop, you become sort of an unserious dilettante, like partner to the American government. They're like, we're going to boot you out. That's billions of revenue gone. And what happens? So same investors that gave billions of dollars are like, hey, hold on a second. That's absolutely not allowed. You need to conform and get back on track. And so what does Dario do? He flip flops. And he's like, oh, I'm really sorry. I didn't mean to. Let's sort of make good. All of that, to me, is an industry that's still in its very early phases and still figuring out what its place in society is. So what is the problem? The problem is the following two clips, and I'll just have Nick play these, and I'd love your guys' reaction."
+    },
+    {
+      "id": 23,
+      "chunk": "chunk2",
+      "relative_start": 494.68,
+      "relative_end": 610.88,
+      "absolute_start": 2894.68,
+      "absolute_end": 3010.88,
+      "model_speaker_guess": "David Friedberg",
+      "text": "The one thing, though, that I think even now is underestimated by all actors in industry, and including in Silicon Valley, is how disruptive these technologies are. If you are going to disrupt the economic and therefore political power significantly of one party's base, highly educated, often female voters who vote mostly Democrat, and military and working class people who do not feel supported, and you feel like that's, you believe that that's going to work out politically, you're in an insane asylum, like that you cannot have, this technology disrupts humanities trained, largely Democratic voters, and, and makes their economic power less, and increases the power, economic power of vocationally trained, working class, often male voters. And, and, and so these disruptions are going to disrupt every aspect of our society. And to make this work, we have to come to an agreement of what it is we're going to do with the technology, how are we going to explain to people who are likely going to have less good and less interesting jobs from their perspective, and how is it that we are going, and by the way, on the military thing, these technologies are dangerous societally. The only justification you could possibly have would be that if we don't do it, our adversaries and will do it, and we will be subject to their rule of law. So if you decouple this from the support of the military, you're going to have an enormous problem explaining to the American people, why is it that we're absorbing the risk of disrupting the very fabric of our society, including the most powerful parts of our society, if it's not because it's about maintaining our ability to be American in the near term and, and long term."
+    },
+    {
+      "id": 24,
+      "chunk": "chunk2",
+      "relative_start": 610.88,
+      "relative_end": 612.53,
+      "absolute_start": 3010.88,
+      "absolute_end": 3012.5299999999997,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Now watch Sam's reaction."
+    },
+    {
+      "id": 25,
+      "chunk": "chunk2",
+      "relative_start": 612.53,
+      "relative_end": 635.24,
+      "absolute_start": 3012.5299999999997,
+      "absolute_end": 3035.24,
+      "model_speaker_guess": "Sam Weitz",
+      "text": "Fundamentally, our business, and I think the business of every other model provider, is going to look like selling tokens. But we see a future where intelligence is a utility like electricity or water, and people buy it from us on a meter and use it for whatever they want to use it for."
+    },
+    {
+      "id": 26,
+      "chunk": "chunk2",
+      "relative_start": 635.24,
+      "relative_end": 725.56,
+      "absolute_start": 3035.24,
+      "absolute_end": 3125.56,
+      "model_speaker_guess": "David Friedberg",
+      "text": "So if you take those three messaging veins on a spectrum, one is we have a sentient super God, we're the only ones that can protect you from it, but, you know, your days are numbered. That's Dario. Alex, which is, hey, hold on a second. You can't have it both ways. You can't both say it on the one hand, and then try to run the fabric of society and flip it. You need to be much more circumspect. And then Sam's, which is, we want to sell tokens as a service. I think the point is that this industry right now, that revenue traction, if anything else, has distracted people from actually getting on the same page and being much more methodical, and much more reliable and trustworthy in explaining all of this and managing the expansion of this. And so what I would say is, all of this fundraising gobbledygook has actually created this breathlessness that is not useful and isn't helping. And I would say there needs to be a lot more seriousness by these folks to actually run this business thoughtfully. You can't be a dilettante, you can't flip flop, you can't pressure test, A/B test this kind of messaging in public. But I understand why you're doing it, because the stakes are so high, you're playing this enormous poker game. But I think we need to do a better job of explaining all this to people, because right now, my end of this is, look at this chart. This is now the result of those three messages. Here is where AI is. It is slightly above the Democratic Party and an autocratic state. That's where AI is. ICE is more popular than AI."
+    },
+    {
+      "id": 27,
+      "chunk": "chunk2",
+      "relative_start": 725.56,
+      "relative_end": 727.81,
+      "absolute_start": 3125.56,
+      "absolute_end": 3127.81,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "So ICE is not very popular."
+    },
+    {
+      "id": 28,
+      "chunk": "chunk2",
+      "relative_start": 727.81,
+      "relative_end": 755.95,
+      "absolute_start": 3127.81,
+      "absolute_end": 3155.95,
+      "model_speaker_guess": "David Friedberg",
+      "text": "So to me, this is really the crux of this, where we are not really being honest. It would be much better if we said soberly, there's a lot of experimenting, this revenue is great, but we don't really know what's real. We're going to try to figure it out. We're going to work methodically. There's a lot of regulated industries. We're going to work within those. We're not going to fluff the law and the rules. Licensor will still mean something. That's a way better, thoughtful, mature message."
+    },
+    {
+      "id": 29,
+      "chunk": "chunk2",
+      "relative_start": 755.95,
+      "relative_end": 757.33,
+      "absolute_start": 3155.95,
+      "absolute_end": 3157.33,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "And Brad, what do you think?"
+    },
+    {
+      "id": 30,
+      "chunk": "chunk2",
+      "relative_start": 757.33,
+      "relative_end": 758.98,
+      "absolute_start": 3157.33,
+      "absolute_end": 3158.98,
+      "model_speaker_guess": "David Friedberg",
+      "text": "And rant, and rant."
+    },
+    {
+      "id": 31,
+      "chunk": "chunk2",
+      "relative_start": 758.98,
+      "relative_end": 791.14,
+      "absolute_start": 3158.98,
+      "absolute_end": 3191.14,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Great rant. Brad, does the industry have a PR problem? Obviously, these recent surveys, and especially comparing them to China, where people see AI as abundance and like this incredible new technology they want to embrace here, people are scared. People are scared they're going to lose their job. People are scared about wealth disparity, the rich get richer, the poor get poorer. There's a lot of fear here in the United States. What can our industry do to turn this around in terms of communication from the big companies?"
+    },
+    {
+      "id": 32,
+      "chunk": "chunk2",
+      "relative_start": 791.14,
+      "relative_end": 791.38,
+      "absolute_start": 3191.14,
+      "absolute_end": 3191.38,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah."
+    },
+    {
+      "id": 33,
+      "chunk": "chunk2",
+      "relative_start": 791.38,
+      "relative_end": 799.21,
+      "absolute_start": 3191.38,
+      "absolute_end": 3199.21,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "They don't seem to be communicating in any coordinated fashion, and, and they obviously are scaring the out of the public."
+    },
+    {
+      "id": 34,
+      "chunk": "chunk2",
+      "relative_start": 799.21,
+      "relative_end": 915.83,
+      "absolute_start": 3199.21,
+      "absolute_end": 3315.83,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "Yeah, no, listen, I think it's, I think it's a fair rant and a fair point. At the start of the Industrial Revolution, at the start, you know, in the, in the late 1800s, we had similar social responses to innovations that were occurring. We, in fact, had some violent clashes. We had demonstrations in the street. We had the entire robber baron movement, you know, so class warfare and worse is, you know, has come with other, you know, kind of industrial changes of this magnitude. So it doesn't surprise me that we have a lot of anxiety by people that they may lose their job. And I think there are people out there who are kind of forecasting into the future in ways that are scary to, you know, the average person who's, who's listening to this. And I don't think that's particularly helpful. So could we do a better job messaging? No doubt about it. But if I just rewind to kind of where we started, I actually think the industry is, you know, this is going to be a pivotal year for the industry to demonstrate, right, how this is really beneficial for humanity. I think we're going to be able to demonstrate that it's very beneficial from a healthcare perspective, from a drug discovery perspective, from an education perspective, et cetera. But we need to have a coordinated effort because Chamath is right. It's deeply unpopular in the country. I happen to be on the optimistic side of this. 70% of the jobs that exist in the United States today did not exist 40 years ago. Right, right? We've gone through the digital disruption that put a lot of people out of work, but the abundance and the, and the recreation of new jobs, right, expanded the pie for, for largely everyone. I think that will be the case here. If you listen to Dario, he says the concern is that the disruption occurs at a faster and, and, and bigger rate, and so that we can't keep up with kind of that replacement. I think that's another fine point. But if we just go back to where we started the conversation, which was, are these good investments, right?"
+    },
+    {
+      "id": 35,
+      "chunk": "chunk2",
+      "relative_start": 915.83,
+      "relative_end": 922.04,
+      "absolute_start": 3315.83,
+      "absolute_end": 3322.04,
+      "model_speaker_guess": "David Friedberg",
+      "text": "That's not the conversation. No, of course, they're good investments. Of course, you're going to make money. That's not what it's about."
+    },
+    {
+      "id": 36,
+      "chunk": "chunk2",
+      "relative_start": 922.04,
+      "relative_end": 933.86,
+      "absolute_start": 3322.04,
+      "absolute_end": 3333.86,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "That's not it. He asked the question, you made the argument, Jason asked the question, right? Are these companies simply selling tokens at a loss, right? And we moved into the system."
+    },
+    {
+      "id": 37,
+      "chunk": "chunk2",
+      "relative_start": 933.86,
+      "relative_end": 937.28,
+      "absolute_start": 3333.86,
+      "absolute_end": 3337.2799999999997,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "They're, they're selling at a profit. I'm buying them and losing money."
+    },
+    {
+      "id": 38,
+      "chunk": "chunk2",
+      "relative_start": 937.28,
+      "relative_end": 938.3,
+      "absolute_start": 3337.2799999999997,
+      "absolute_end": 3338.3,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "Right."
+    },
+    {
+      "id": 39,
+      "chunk": "chunk2",
+      "relative_start": 938.3,
+      "relative_end": 940.34,
+      "absolute_start": 3338.3,
+      "absolute_end": 3340.34,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "In the 1849 Gold Rush,"
+    },
+    {
+      "id": 40,
+      "chunk": "chunk2",
+      "relative_start": 940.34,
+      "relative_end": 940.64,
+      "absolute_start": 3340.34,
+      "absolute_end": 3340.64,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah."
+    },
+    {
+      "id": 41,
+      "chunk": "chunk2",
+      "relative_start": 940.64,
+      "relative_end": 969.98,
+      "absolute_start": 3340.64,
+      "absolute_end": 3369.98,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Anthropic and OpenAI and all of these model makers are selling the pick and shovel in the Gold Rush. I am buying it, and I'm trying to pan for gold. But as with the Gold Rush, most of these companies will go out of business. And all I'm saying is, if we are really circumspect and honest, there is still way more to figure out than has been figured out. This is not a solved problem. And I think we, it would behoove everybody to just tell the truth about this. It would be way better to be honest. This is not figured out."
+    },
+    {
+      "id": 42,
+      "chunk": "chunk2",
+      "relative_start": 969.98,
+      "relative_end": 975.14,
+      "absolute_start": 3369.98,
+      "absolute_end": 3375.14,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "I would say I think the data, the cards that are being turned on the table move me in the exact opposite direction."
+    },
+    {
+      "id": 43,
+      "chunk": "chunk2",
+      "relative_start": 975.14,
+      "relative_end": 979.82,
+      "absolute_start": 3375.14,
+      "absolute_end": 3379.82,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Okay, let me get Sacks involved, and then I'll give my take. Sacks, you have any thoughts here?"
+    },
+    {
+      "id": 44,
+      "chunk": "chunk2",
+      "relative_start": 979.82,
+      "relative_end": 1000.43,
+      "absolute_start": 3379.82,
+      "absolute_end": 3400.43,
+      "model_speaker_guess": "Altimeter",
+      "text": "Well, I have some thoughts on the question you asked about, is the industry doing a good job with PR? I think the answer is clearly no. I think they are scaring the bejesus out of the public, and that's why the popularity is right down there with, I don't know, what was it, Iran? It's pretty, I think we're a little more popular than Iran, but, but look."
+    },
+    {
+      "id": 45,
+      "chunk": "chunk2",
+      "relative_start": 1000.43,
+      "relative_end": 1003.82,
+      "absolute_start": 3400.43,
+      "absolute_end": 3403.82,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Iran's at 100 years to it up. So we've only had two."
+    },
+    {
+      "id": 46,
+      "chunk": "chunk2",
+      "relative_start": 1003.82,
+      "relative_end": 1005.29,
+      "absolute_start": 3403.82,
+      "absolute_end": 3405.29,
+      "model_speaker_guess": "Altimeter",
+      "text": "Or 47, anyway."
+    },
+    {
+      "id": 47,
+      "chunk": "chunk2",
+      "relative_start": 1005.29,
+      "relative_end": 1007.87,
+      "absolute_start": 3405.29,
+      "absolute_end": 3407.87,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Yeah, Iran's at 47 years to, we've only had two."
+    },
+    {
+      "id": 48,
+      "chunk": "chunk2",
+      "relative_start": 1007.87,
+      "relative_end": 1076.56,
+      "absolute_start": 3407.87,
+      "absolute_end": 3476.56,
+      "model_speaker_guess": "Altimeter",
+      "text": "But it is very much a US-specific problem. If you look at data, sentiment data across countries, what you'll see is that other countries are much more optimistic about AI than the US. I think Stanford did a study on AI optimism. They simply asked the question, do you think AI is going to be more beneficial than harmful? Something like 80% of people in China said yes. In the US, it was in the 30s, and it might be even lower now. And it's not just China and the US. You see across Asian countries, they tend to be pretty optimistic. And then the US and Western Europe tend to be pretty pessimistic about it. I think that's less about the reality of AI and more about our media environment and who influences it. Obviously, you have the influence of Hollywood has created a lot of dystopian films about AI. You've got the fact that, like we talked about, these CEOs are doing a horrible job, and they keep talking about putting everyone out of business. I mean, this is, I think, been not accidental. I would say some of these CEOs are speaking this way because they're not very good at comms. I think others are actually doing it because they see a strategy there. You know, they're going for a regulatory capture agenda."
+    },
+    {
+      "id": 49,
+      "chunk": "chunk2",
+      "relative_start": 1076.56,
+      "relative_end": 1081.18,
+      "absolute_start": 3476.56,
+      "absolute_end": 3481.1800000000003,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Such a good point, Sacks. It's dilutions of grandeur, plus they're positioning their companies. Yeah."
+    },
+    {
+      "id": 50,
+      "chunk": "chunk2",
+      "relative_start": 1081.18,
+      "relative_end": 1115.18,
+      "absolute_start": 3481.1800000000003,
+      "absolute_end": 3515.1800000000003,
+      "model_speaker_guess": "Altimeter",
+      "text": "It could be for financing reasons, like you've mentioned, Chamath. It's like they want to tout this stuff for fundraising. But also, I think that some of it is to create a regulatory backlash that they can then control, you know, create a licensing scheme or permissioning scheme. And that's a big part of it, too. And then I think you just have the fact that in our media environment, the scare stories are the ones that get a lot more attention than the heartwarming stories, you know, if it, if it bleeds, it leads type thing. So you can just see how unpopular it is for all of these reasons."
+    },
+    {
+      "id": 51,
+      "chunk": "chunk2",
+      "relative_start": 1115.18,
+      "relative_end": 1127.63,
+      "absolute_start": 3515.1800000000003,
+      "absolute_end": 3527.63,
+      "model_speaker_guess": "David Friedberg",
+      "text": "You know, New York is about to outlaw medical and legal advice from AI chatbots, which, by the way, that's probably the, the most obviously valuable and high, and highest ROI thing for, for a consumer."
+    },
+    {
+      "id": 52,
+      "chunk": "chunk2",
+      "relative_start": 1127.63,
+      "relative_end": 1131.47,
+      "absolute_start": 3527.63,
+      "absolute_end": 3531.4700000000003,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "And it hurts poorest people the worst. Hurts poorest people the worst."
+    },
+    {
+      "id": 53,
+      "chunk": "chunk2",
+      "relative_start": 1131.47,
+      "relative_end": 1147.13,
+      "absolute_start": 3531.4700000000003,
+      "absolute_end": 3547.13,
+      "model_speaker_guess": "Altimeter",
+      "text": "But you understand, like, if you're, say, a professional association that sees it as your job to protect your industry from disruption, you might actually want to spread FUD about AI in order to then seek those protections through your state legislature."
+    },
+    {
+      "id": 54,
+      "chunk": "chunk2",
+      "relative_start": 1147.13,
+      "relative_end": 1154.33,
+      "absolute_start": 3547.13,
+      "absolute_end": 3554.33,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Well, because if you have companies that are fanning those flames, and those companies are the ones in the industry, it's making your job even easier."
+    },
+    {
+      "id": 55,
+      "chunk": "chunk2",
+      "relative_start": 1154.33,
+      "relative_end": 1184.31,
+      "absolute_start": 3554.33,
+      "absolute_end": 3584.31,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Well, just think about the poorest person. They, they can't afford a lawyer, and they want to do their own research. And they research the legal stuff to, in order to fight an eviction, or there are poor people who don't have a primary care doctor, they're not insured, and they find a way to deal with, you know, some medical issue they're having. This is the greatest thing. It's the, it's a, it levels the playing field for, for people or people without resources. So this is the craziest, stupidest legislation ever. But New York City is a disgrace. I give them the scratchy out of the week."
+    },
+    {
+      "id": 56,
+      "chunk": "chunk2",
+      "relative_start": 1184.31,
+      "relative_end": 1220.14,
+      "absolute_start": 3584.31,
+      "absolute_end": 3620.1400000000003,
+      "model_speaker_guess": "David Friedberg",
+      "text": "No, the, the problem is very specifically that these people that rely on these models to make a healthcare diagnosis or get a legal opinion to help improve their lives, the makers of those tools are telling everybody that they're about to bring death and destruction upon the economy and the world. So then the lawyers and the doctors are like, well, then maybe we should slow this down. And they tell their lobbyists, who then go to New York, and then tell the New York legislators, hey, these guys are like trying to wreak havoc. And then they're like, oh, yeah, well, then maybe we should shut it down. That is the loop that's happened."
+    },
+    {
+      "id": 57,
+      "chunk": "chunk2",
+      "relative_start": 1220.14,
+      "relative_end": 1231.72,
+      "absolute_start": 3620.1400000000003,
+      "absolute_end": 3631.7200000000003,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "That was the Bernie Sanders moment this week where he said, we ought to have a moratorium on all data centers being built in the United States because AI is dangerous. That was his message, and that is what he's pushing."
+    },
+    {
+      "id": 58,
+      "chunk": "chunk2",
+      "relative_start": 1231.72,
+      "relative_end": 1270.14,
+      "absolute_start": 3631.7200000000003,
+      "absolute_end": 3670.1400000000003,
+      "model_speaker_guess": "Altimeter",
+      "text": "And actually, that brings me to another point, which is, if you look closely at Bernie Sanders messaging, one of the talking points he used was literally verbatim from Future of Life Institute. I think it was something about how AI is less regulated than a sandwich shop, which is just not true. But Future of Life is one of these EA-funded doomer think tanks, and they've got something like $1 billion. Vitalik Buterin donated $600 million of dog coins to, to, anyway, you've got, I mean, this is one really weird sort of quirk about our media environment is we have these EA-funded think tanks with literally billions of dollars. You know, it's guys like Dustin Moskowitz and"
+    },
+    {
+      "id": 59,
+      "chunk": "chunk2",
+      "relative_start": 1270.14,
+      "relative_end": 1281.54,
+      "absolute_start": 3670.1400000000003,
+      "absolute_end": 3681.54,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "They're the D cells. They're the democratic socialist kind of arm. It's so weird that, like, New York is now taking the crown of most retarded state from California. I don't know how this happened, but they just seem to be making every mistake possible."
+    },
+    {
+      "id": 60,
+      "chunk": "chunk2",
+      "relative_start": 1281.54,
+      "relative_end": 1292.16,
+      "absolute_start": 3681.54,
+      "absolute_end": 3692.16,
+      "model_speaker_guess": "Altimeter",
+      "text": "But hold on, let me just finish my point, because you've got these, let's call them doomer think tanks funded by these EA billionaires. They have literally billions of dollars. You can influence a lot of public discourse with that, a lot."
+    },
+    {
+      "id": 61,
+      "chunk": "chunk2",
+      "relative_start": 1292.16,
+      "relative_end": 1292.55,
+      "absolute_start": 3692.16,
+      "absolute_end": 3692.55,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Sure."
+    },
+    {
+      "id": 62,
+      "chunk": "chunk2",
+      "relative_start": 1292.55,
+      "relative_end": 1316.91,
+      "absolute_start": 3692.55,
+      "absolute_end": 3716.91,
+      "model_speaker_guess": "Altimeter",
+      "text": "And they are behind a lot of the NIMBY stuff around data centers. They've been spreading a lot of the FUD around data centers, increasing your electricity prices, which, again, I think is a solved problem now, because the users, the AI companies have agreed to pay for the incremental costs and stand up their own power generation. They've been spreading a lot of stories about water usage, which is just totally made up. I mean, the modern data centers recirculate water."
+    },
+    {
+      "id": 63,
+      "chunk": "chunk2",
+      "relative_start": 1316.91,
+      "relative_end": 1317.63,
+      "absolute_start": 3716.91,
+      "absolute_end": 3717.63,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah, they're closed loop."
+    },
+    {
+      "id": 64,
+      "chunk": "chunk2",
+      "relative_start": 1317.63,
+      "relative_end": 1343.97,
+      "absolute_start": 3717.63,
+      "absolute_end": 3743.9700000000003,
+      "model_speaker_guess": "Altimeter",
+      "text": "So they don't use up water. But again, you've kind of got these doomer groups who are just trying to stop AI however they can. And they're extremely well-funded, and they're having a big impact. And I think actually, this is one of the reasons why you're seeing in the US, again, that AI, I think, is, it's basically the least popular thing they can pull for, except for the Democratic Party and Iran. And by the way, FLI, the Future Life Institute, they also fund journalism fellowships and endowments of publications. So"
+    },
+    {
+      "id": 65,
+      "chunk": "chunk2",
+      "relative_start": 1343.97,
+      "relative_end": 1346.43,
+      "absolute_start": 3743.9700000000003,
+      "absolute_end": 3746.4300000000003,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Who probably writes negatively about AI."
+    },
+    {
+      "id": 66,
+      "chunk": "chunk2",
+      "relative_start": 1346.43,
+      "relative_end": 1347.51,
+      "absolute_start": 3746.4300000000003,
+      "absolute_end": 3747.51,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah, exactly."
+    },
+    {
+      "id": 67,
+      "chunk": "chunk2",
+      "relative_start": 1347.51,
+      "relative_end": 1470.68,
+      "absolute_start": 3747.51,
+      "absolute_end": 3870.6800000000003,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Here, Sacks, look at this chart. It goes back now a little bit earlier than 23, but I had the data accurately from 23, so we're going into the fourth year. About 40% of all protested data centers in America get canceled. And so in 2023, this was a non-issue. There were a few data centers that were protested, and a few of those, 40% of them, I think it was literally like one or two, got canceled. But then starting in 24, when you have this divergence of messaging or this chaotic slipshod messaging, and it was just a fever pitch to raise money, what you started to see was this fomenting of negative perspective by individual people on the ground. And so in 2024, about 40% of all protested data centers were canceled. Still a small number, you could ignore it. But last year was when the bottom fell out. We had about 25 data centers canceled, about five gigawatts that got canceled. If you use Sarah Fryer's number, that's $50 billion a year of revenue, which is off the table because of what happened in '25. Now, that has implications to everybody. Look at the amount of taxes that that would actually raise for federal and local and state governments. All gone, vanished. In '26, just at the end of February, there are about 100 data centers being protested, which, if you flow that through, will mean about 40 will get canceled. And that number right now is about seven gigawatts, so another $70 billion a year of revenue. So just last year and this year, we've taken off the table $120 billion of CUM revenue per year. This is a wake-up call that this messaging is wrong. These people are not doing what is right on behalf of a very nascent and critical industry for America. There's only so much that Sacks can do, the White House can do. All these other people are kind of at the periphery. But if the people that are on the ground don't get their together, this is a national disaster."
+    },
+    {
+      "id": 68,
+      "chunk": "chunk2",
+      "relative_start": 1470.68,
+      "relative_end": 1556.31,
+      "absolute_start": 3870.6800000000003,
+      "absolute_end": 3956.31,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Just to give people a sense of where this is happening, almost all of these cancellations are Virginia and Indiana, according to some cursory research here. And there have been zero cancellations due to local opposition here in the great state of Texas, where we have over 150 gigawatts of data capacity requests. So if you want to do this, come to Texas, talk to Abbott, talk to Ted Cruz, you just CC them on your tweet, and they'll have you to the poker game, and they will green light it. Brad, before we move on, I want to get your opinion on open source and how powerful it is and how powerful Apple silicon is getting. I'm not sure how you factor this in at Altimeter into your thinking, but this seems to me to be a massive headwind against the two big bets you have. All of these open source models, we started running them, picking up about 85% of our tokens right now, and every startup I know is saying, we are standing up our local models, and we only use the top models, the paid ones, when we have jobs we can't do. So I'm just curious your thoughts on that. And you can add to that the auto research project from Karpathy that came out this weekend. For people who don't know, we now have a group of tinkerers who are setting up their open claws and now setting up large language models and now trying to train them with this auto research tool. This seems like a parallel track that could be material. I'm just curious if you're monitoring it at all."
+    },
+    {
+      "id": 69,
+      "chunk": "chunk2",
+      "relative_start": 1556.31,
+      "relative_end": 1561.98,
+      "absolute_start": 3956.31,
+      "absolute_end": 3961.98,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "I mean, first, I would say that I am very enthusiastic for open source."
+    },
+    {
+      "id": 70,
+      "chunk": "chunk2",
+      "relative_start": 1561.98,
+      "relative_end": 1562.31,
+      "absolute_start": 3961.98,
+      "absolute_end": 3962.31,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Okay."
+    },
+    {
+      "id": 71,
+      "chunk": "chunk2",
+      "relative_start": 1562.31,
+      "relative_end": 1628.48,
+      "absolute_start": 3962.31,
+      "absolute_end": 4028.48,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "We see it in widespread use everywhere. But here's the interesting thing, you know, for the advanced companies, they're doing some like planning, you know, with the frontier labs, and then they're kind of doing the execution, if you will, with the open source models. So they're running an ensemble of model strategy. But here's what I think is more impressive. We have incredible open source models nearly on the frontier, and notwithstanding that, we're seeing companies like Anthropic add $5 or $6 billion of revenue in a single month, which is extraordinary. We've never seen anything like it in technology. And that's in the face, Jason, of all this open source usage. So what does it tell me? It tells me that the TAM is dramatically bigger than any of us think that it is, and that, you know, when we, when we look back on this period, you know, that will be the big takeaway. It's a takeaway with Uber, the takeaway with Google, the takeaway with Amazon. The TAM was way bigger. We've crossed an important threshold. Open source will be a part of it. But clearly, the frontier, frontier labs can do well, even in the face of it."
+    },
+    {
+      "id": 72,
+      "chunk": "chunk2",
+      "relative_start": 1628.48,
+      "relative_end": 1682.84,
+      "absolute_start": 4028.48,
+      "absolute_end": 4082.84,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "All right, a little housekeeping. The All-In Summit is coming. And liquidity is, I think it's sold out. We're about to sell out. We might have a couple of tickets left. You can find both events at allin.com/events. And All-In Summit tickets, if you want to get there quickly before they sell out, September 13, 14, and 15 in Los Angeles again. And for all the All-In listeners, we're launching a survey today. This is super important to take the All-In survey. If you made it to this point in the podcast, if you are an early true believer in the pod, if you're one of the All-In stans, we need you to fill out this survey, allin.com/survey, allin.com/survey. All right, let's wrap up with this final story that went viral. The millionaire tax has hit Washington State. Howard Schultz, CEO, longtime CEO of Starbucks, has bowed, and he's gone to Miami."
+    },
+    {
+      "id": 73,
+      "chunk": "chunk2",
+      "relative_start": 1682.84,
+      "relative_end": 1687.04,
+      "absolute_start": 4082.84,
+      "absolute_end": 4087.04,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Surfside. He's in Surfside. He bought, he bought a condo in Surfside."
+    },
+    {
+      "id": 74,
+      "chunk": "chunk2",
+      "relative_start": 1687.04,
+      "relative_end": 1688.78,
+      "absolute_start": 4087.04,
+      "absolute_end": 4088.7799999999997,
+      "model_speaker_guess": "Altimeter",
+      "text": "He, he pulled a J Cal?"
+    },
+    {
+      "id": 75,
+      "chunk": "chunk2",
+      "relative_start": 1688.78,
+      "relative_end": 1689.86,
+      "absolute_start": 4088.7799999999997,
+      "absolute_end": 4089.8599999999997,
+      "model_speaker_guess": "David Friedberg",
+      "text": "He pulled a J Cal."
+    },
+    {
+      "id": 76,
+      "chunk": "chunk2",
+      "relative_start": 1689.86,
+      "relative_end": 1692.11,
+      "absolute_start": 4089.8599999999997,
+      "absolute_end": 4092.1099999999997,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "I think you mean a Saxon pool."
+    },
+    {
+      "id": 77,
+      "chunk": "chunk2",
+      "relative_start": 1692.11,
+      "relative_end": 1696.97,
+      "absolute_start": 4092.1099999999997,
+      "absolute_end": 4096.97,
+      "model_speaker_guess": "Altimeter",
+      "text": "Well, yeah, but I was never, I was never a Starbucks liberal before I left the state of California."
+    },
+    {
+      "id": 78,
+      "chunk": "chunk2",
+      "relative_start": 1696.97,
+      "relative_end": 1711.01,
+      "absolute_start": 4096.97,
+      "absolute_end": 4111.01,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "I don't know how many times I have to make this correction. I am a moderate. I literally voted four elections in a row for Republicans. People have asked me for the receipts, Pataki, Giuliani, and Bloomberg. I literally, for almost a decade,"
+    },
+    {
+      "id": 79,
+      "chunk": "chunk2",
+      "relative_start": 1711.01,
+      "relative_end": 1711.46,
+      "absolute_start": 4111.01,
+      "absolute_end": 4111.46,
+      "model_speaker_guess": "Altimeter",
+      "text": "Okay, okay."
+    },
+    {
+      "id": 80,
+      "chunk": "chunk2",
+      "relative_start": 1711.46,
+      "relative_end": 1743.93,
+      "absolute_start": 4111.46,
+      "absolute_end": 4143.93,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "voted exclusively Republican. Washington's millionaire tax passed this week. Here's what the tax is. People making more than $1 million a year will pay an extra 9.9% in tax starting in 2029. The Budget Center estimates the tax will impact 30,000 households, bring in another four billion for the state's general fund. The funds are supposed to go towards public schools, higher education, healthcare. In a huge coincidence, on the same day the new tax was passed, Howard Schultz, the billionaire Starbucks founder."
+    },
+    {
+      "id": 81,
+      "chunk": "chunk2",
+      "relative_start": 1743.93,
+      "relative_end": 1746.54,
+      "absolute_start": 4143.93,
+      "absolute_end": 4146.54,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Huge coincidence, did you say?"
+    },
+    {
+      "id": 82,
+      "chunk": "chunk2",
+      "relative_start": 1746.54,
+      "relative_end": 1750.29,
+      "absolute_start": 4146.54,
+      "absolute_end": 4150.29,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yeah, just unrelated stories."
+    },
+    {
+      "id": 83,
+      "chunk": "chunk2",
+      "relative_start": 1750.29,
+      "relative_end": 1751.43,
+      "absolute_start": 4150.29,
+      "absolute_end": 4151.43,
+      "model_speaker_guess": "David Friedberg",
+      "text": "An unrelated story, yeah."
+    },
+    {
+      "id": 84,
+      "chunk": "chunk2",
+      "relative_start": 1751.43,
+      "relative_end": 1751.67,
+      "absolute_start": 4151.43,
+      "absolute_end": 4151.67,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Yes."
+    },
+    {
+      "id": 85,
+      "chunk": "chunk2",
+      "relative_start": 1751.67,
+      "relative_end": 1752.27,
+      "absolute_start": 4151.67,
+      "absolute_end": 4152.27,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Unrelated news."
+    },
+    {
+      "id": 86,
+      "chunk": "chunk2",
+      "relative_start": 1752.27,
+      "relative_end": 1759.83,
+      "absolute_start": 4152.27,
+      "absolute_end": 4159.83,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "He will be leaving Seattle after a 44-year run, because he found out about these incredible Cuban sandwiches in Miami."
+    },
+    {
+      "id": 87,
+      "chunk": "chunk2",
+      "relative_start": 1759.83,
+      "relative_end": 1767.87,
+      "absolute_start": 4159.83,
+      "absolute_end": 4167.87,
+      "model_speaker_guess": "David Friedberg",
+      "text": "There was an opportunity, there was an opportunity to buy a $44 million condo in Surfside. He couldn't pass it up. It just happened to be on the same day that they passed the millionaire tax."
+    },
+    {
+      "id": 88,
+      "chunk": "chunk2",
+      "relative_start": 1767.87,
+      "relative_end": 1775.67,
+      "absolute_start": 4167.87,
+      "absolute_end": 4175.67,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "He, he had the Cuban sandwich at Les Sanguich, and he fell in love. Schultz has been getting crushed"
+    },
+    {
+      "id": 89,
+      "chunk": "chunk2",
+      "relative_start": 1775.67,
+      "relative_end": 1776.21,
+      "absolute_start": 4175.67,
+      "absolute_end": 4176.21,
+      "model_speaker_guess": "David Friedberg",
+      "text": "What a joke."
+    },
+    {
+      "id": 90,
+      "chunk": "chunk2",
+      "relative_start": 1776.21,
+      "relative_end": 1830.68,
+      "absolute_start": 4176.21,
+      "absolute_end": 4230.68,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "after saying when he ran for president that he would be willing to pay more taxes. Bezos obviously left back in November of 2023. And people speculated maybe the 7% capital gains tax would have influenced that, who knows. So I guess, Chamath, what is the end game here? Because for these local politicians, they must have learned the lesson that people of means can move. They have the ability to buy new homes, put their old homes on the market. They're very mobile, and they could even leave the United States and go to Singapore or Dubai or other locations in the world. Why are they still enacting these, and will they continue to still enact these until we get to 60, 70% tax rates, and we just lose all of the creators, and this becomes an Randian?"
+    },
+    {
+      "id": 91,
+      "chunk": "chunk2",
+      "relative_start": 1830.68,
+      "relative_end": 1919.13,
+      "absolute_start": 4230.68,
+      "absolute_end": 4319.13,
+      "model_speaker_guess": "David Friedberg",
+      "text": "I think that state politicians on the West Coast are very ineffective and not, not very smart. Nick, there's a, there's a tweet that was published, I think maybe it was an infographic, that showed net migration rates of every single state for 2025. Washington is a few months behind California in trying to enact these stupid taxes. And the reason they're stupid is these kinds of things don't work at the state level. And we know what it's already done in California, because the Hoover Institution just published something this morning, and it's a complete indictment of, of what the billionaire tax was trying to do. And by the way, this billionaire tax is only polling right now at 25% of the votes it needs. So maybe it'll find a way to get on the ballot. And then even then, it'll have an uphill climb to get voted in. But look at the destruction that it has done in California by just announcing it. The Hoover Institution basically ran this Monte Carlo simulation. They ran 100,000 runs, and in 71% of those runs, it comes out with a negative NPV. And if you expected value it out, it's about a $25 billion hole. They also found that they overcounted the number of billionaires in California, so that number was wrong. They undercounted the amount of revenue that they pay, so that was wrong. And they overcounted the estimate of how much money that they would make. So that was wrong."
+    },
+    {
+      "id": 92,
+      "chunk": "chunk2",
+      "relative_start": 1919.13,
+      "relative_end": 1921.32,
+      "absolute_start": 4319.13,
+      "absolute_end": 4321.32,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "So they're not good at math. They're not good at math."
+    },
+    {
+      "id": 93,
+      "chunk": "chunk2",
+      "relative_start": 1921.32,
+      "relative_end": 1950.94,
+      "absolute_start": 4321.32,
+      "absolute_end": 4350.9400000000005,
+      "model_speaker_guess": "David Friedberg",
+      "text": "So when you add it all up, they thought they were going to make 100. They're actually going to make 40. The people that left pay, you know, $3 to $5 billion a year of taxes. It's going to create a $25 billion hole. You're going to have the middle class that's now going to have to foot this, because this is net revenue that's not going to come into the budget. That's about 2,500 per middle-class household. There's about 10 million in California. So that's what's happened just by making the threat."
+    },
+    {
+      "id": 94,
+      "chunk": "chunk2",
+      "relative_start": 1950.94,
+      "relative_end": 1951.15,
+      "absolute_start": 4350.9400000000005,
+      "absolute_end": 4351.15,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Right."
+    },
+    {
+      "id": 95,
+      "chunk": "chunk2",
+      "relative_start": 1951.15,
+      "relative_end": 1980.05,
+      "absolute_start": 4351.15,
+      "absolute_end": 4380.05,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Washington had a 23-hour debate and passed the law. So I suspect when you look back on this in 18 or 24 months, it'll be as bad or worse than California. These things don't make sense. The reason they don't make sense is that you are putting good money after bad. We all know that money that goes to the state governments are wasted. We just don't know how much. And so when you keep asking more, eventually, the smart people say, enough's enough. I'm out of here."
+    },
+    {
+      "id": 96,
+      "chunk": "chunk2",
+      "relative_start": 1980.05,
+      "relative_end": 1996.22,
+      "absolute_start": 4380.05,
+      "absolute_end": 4396.22,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "We might find out how much. I think Bari Weiss is on the case. I don't know if you saw her do her CBS report this week, but she's, she's going hard for fraud. And until you get fraud out of the system, I don't think you have the moral high ground to raise taxes. I think that should be the message that all Americans"
+    },
+    {
+      "id": 97,
+      "chunk": "chunk2",
+      "relative_start": 1996.22,
+      "relative_end": 1997.03,
+      "absolute_start": 4396.22,
+      "absolute_end": 4397.03,
+      "model_speaker_guess": "David Friedberg",
+      "text": "That's very well said."
+    },
+    {
+      "id": 98,
+      "chunk": "chunk2",
+      "relative_start": 1997.03,
+      "relative_end": 1997.81,
+      "absolute_start": 4397.03,
+      "absolute_end": 4397.8099999999995,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "send to politicians."
+    },
+    {
+      "id": 99,
+      "chunk": "chunk2",
+      "relative_start": 1997.81,
+      "relative_end": 2000.39,
+      "absolute_start": 4397.8099999999995,
+      "absolute_end": 4400.39,
+      "model_speaker_guess": "David Friedberg",
+      "text": "That should be your campaign promise when you run."
+    },
+    {
+      "id": 100,
+      "chunk": "chunk2",
+      "relative_start": 2000.39,
+      "relative_end": 2000.93,
+      "absolute_start": 4400.39,
+      "absolute_end": 4400.93,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Okay."
+    },
+    {
+      "id": 101,
+      "chunk": "chunk2",
+      "relative_start": 2000.93,
+      "relative_end": 2001.56,
+      "absolute_start": 4400.93,
+      "absolute_end": 4401.5599999999995,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Whatever, whatever you're going to run."
+    },
+    {
+      "id": 102,
+      "chunk": "chunk2",
+      "relative_start": 2001.56,
+      "relative_end": 2005.31,
+      "absolute_start": 4401.5599999999995,
+      "absolute_end": 4405.3099999999995,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Hi, I'm Jason Calacanis, and I will get rid of fraud and lower your taxes."
+    },
+    {
+      "id": 103,
+      "chunk": "chunk2",
+      "relative_start": 2005.31,
+      "relative_end": 2020.43,
+      "absolute_start": 4405.3099999999995,
+      "absolute_end": 4420.43,
+      "model_speaker_guess": "Altimeter",
+      "text": "Look, you may have seen an even more severe tax was proposed at the federal level where Bernie Sanders and, and I think Ro Khanna came out with their version of a national wealth tax, where it wasn't just 5% once, like in California, it was 5% per year."
+    },
+    {
+      "id": 104,
+      "chunk": "chunk2",
+      "relative_start": 2020.43,
+      "relative_end": 2021.21,
+      "absolute_start": 4420.43,
+      "absolute_end": 4421.21,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Per year."
+    },
+    {
+      "id": 105,
+      "chunk": "chunk2",
+      "relative_start": 2021.21,
+      "relative_end": 2031.59,
+      "absolute_start": 4421.21,
+      "absolute_end": 4431.59,
+      "model_speaker_guess": "Altimeter",
+      "text": "So in other words, in roughly 20 years, the federal government is going to take all of your money. I mean, that's, it, look, this is socialism. This is another way to get to the same endpoint, which is the government owns everything."
+    },
+    {
+      "id": 106,
+      "chunk": "chunk2",
+      "relative_start": 2031.59,
+      "relative_end": 2039.96,
+      "absolute_start": 4431.59,
+      "absolute_end": 4439.96,
+      "model_speaker_guess": "David Friedberg",
+      "text": "They seize. Well, I mean, the seizure part of it, I think, is the nuanced point we have to get across, which is, if you earned it and paid your taxes already,"
+    },
+    {
+      "id": 107,
+      "chunk": "chunk2",
+      "relative_start": 2039.96,
+      "relative_end": 2040.47,
+      "absolute_start": 4439.96,
+      "absolute_end": 4440.47,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "it's yours."
+    },
+    {
+      "id": 108,
+      "chunk": "chunk2",
+      "relative_start": 2040.47,
+      "relative_end": 2049.59,
+      "absolute_start": 4440.47,
+      "absolute_end": 4449.59,
+      "model_speaker_guess": "David Friedberg",
+      "text": "And then the state can just decide, you know what, we didn't take enough 10 years ago. We need to go seize that. Hey, when you sold Yammer, we need to take enough. We need to take it now."
+    },
+    {
+      "id": 109,
+      "chunk": "chunk2",
+      "relative_start": 2049.59,
+      "relative_end": 2060.06,
+      "absolute_start": 4449.59,
+      "absolute_end": 4460.0599999999995,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Raise your hand if you believe the things you own are better off being owned by Bernie Sanders and Ro Khanna. Raise your hand if that's what you believe. I mean, you'd have to be an idiot to believe that."
+    },
+    {
+      "id": 110,
+      "chunk": "chunk2",
+      "relative_start": 2060.06,
+      "relative_end": 2145.86,
+      "absolute_start": 4460.0599999999995,
+      "absolute_end": 4545.860000000001,
+      "model_speaker_guess": "David Friedberg",
+      "text": "I'll tell you, the last time we saw these proposals of asset seizures was during the Gilded Age, you know, 1870 to 1920. You know, then it was Carnegie and Rockefeller. You know, what's interesting, I went back and looked at it, there were actually, like, it was actual warfare. We had hundreds of people killed in clashes, you know, during the Great Railroad Strike, the Pullman Strike, et cetera. And it was all over this. And so I think shame on the politicians that are fanning the flames of class warfare. We all need to bring the temperature down. There are fair debates on whether states have enough resources to fulfill their obligations to the citizens. There are fair debates about fraud. All has to be taken on. But I think it's interesting, the state of California, right? I think the teachers union is against the, the billionaire's tax, because they know it's going to lead to less dollars for education for the state of California. Matt Mahan, who's running for governor, is against the tax. The current sitting governor, Democrat, against the tax, right? They all need to step up and explain, not just that they're against the tax, but we, you're either on the side of business and entrepreneurs and creativity and moving the state forward and growing the economy, or you're against it. And that's what's at stake here. And fortunately, the outcome of the battle, you know, during the Gilded Age was that America didn't abandon entrepreneurialism. We didn't abandon capitalism like Europe did."
+    },
+    {
+      "id": 111,
+      "chunk": "chunk2",
+      "relative_start": 2145.86,
+      "relative_end": 2146.97,
+      "absolute_start": 4545.860000000001,
+      "absolute_end": 4546.969999999999,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "And now leaned into it."
+    },
+    {
+      "id": 112,
+      "chunk": "chunk2",
+      "relative_start": 2146.97,
+      "relative_end": 2148.35,
+      "absolute_start": 4546.969999999999,
+      "absolute_end": 4548.35,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Now we played it out."
+    },
+    {
+      "id": 113,
+      "chunk": "chunk2",
+      "relative_start": 2148.35,
+      "relative_end": 2157.74,
+      "absolute_start": 4548.35,
+      "absolute_end": 4557.74,
+      "model_speaker_guess": "Altimeter",
+      "text": "One point on that. So you mentioned that some of the unions in California are opposed to this, this asset seizure tax. That's only because they weren't cut in on it."
+    },
+    {
+      "id": 114,
+      "chunk": "chunk2",
+      "relative_start": 2157.74,
+      "relative_end": 2158.13,
+      "absolute_start": 4557.74,
+      "absolute_end": 4558.13,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Right."
+    },
+    {
+      "id": 115,
+      "chunk": "chunk2",
+      "relative_start": 2158.13,
+      "relative_end": 2163.77,
+      "absolute_start": 4558.13,
+      "absolute_end": 4563.77,
+      "model_speaker_guess": "Altimeter",
+      "text": "So there's already rumors that the California Teachers Association is working on their own version"
+    },
+    {
+      "id": 116,
+      "chunk": "chunk2",
+      "relative_start": 2163.77,
+      "relative_end": 2164.43,
+      "absolute_start": 4563.77,
+      "absolute_end": 4564.43,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Oh, boy."
+    },
+    {
+      "id": 117,
+      "chunk": "chunk2",
+      "relative_start": 2164.43,
+      "relative_end": 2169.23,
+      "absolute_start": 4564.43,
+      "absolute_end": 4569.23,
+      "model_speaker_guess": "Altimeter",
+      "text": "of a billionaire asset seizure for not this election cycle, but for the next one."
+    },
+    {
+      "id": 118,
+      "chunk": "chunk2",
+      "relative_start": 2169.23,
+      "relative_end": 2169.74,
+      "absolute_start": 4569.23,
+      "absolute_end": 4569.74,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Yeah."
+    },
+    {
+      "id": 119,
+      "chunk": "chunk2",
+      "relative_start": 2169.74,
+      "relative_end": 2202.67,
+      "absolute_start": 4569.74,
+      "absolute_end": 4602.67,
+      "model_speaker_guess": "Altimeter",
+      "text": "And next time, they're going to have their ducks in a row, and they're going to have all the pigs at the trough, and all the unions are going to get together. Because the SEIU, UHW, they did this on their own. So again, they didn't allow all the other groups to wet their beak. So I think that, unfortunately, I think that's going to be corrected. If this one doesn't pass, they'll correct it for '28, and it's more likely to pass because they're all going to do it. And the other thing is that I think that by '28, this national wealth tax will just be a standard part of the Democratic platform."
+    },
+    {
+      "id": 120,
+      "chunk": "chunk2",
+      "relative_start": 2202.67,
+      "relative_end": 2203.93,
+      "absolute_start": 4602.67,
+      "absolute_end": 4603.93,
+      "model_speaker_guess": "David Friedberg",
+      "text": "It's going to be table stakes, yeah."
+    },
+    {
+      "id": 121,
+      "chunk": "chunk2",
+      "relative_start": 2203.93,
+      "relative_end": 2243.46,
+      "absolute_start": 4603.93,
+      "absolute_end": 4643.46,
+      "model_speaker_guess": "Altimeter",
+      "text": "Yeah, it's table stakes. I think that, you know, the Bernie Sanders, Ro Khanna position will be the position of the Democratic Party. And you even see Gavin Newsom creating wiggle room for himself to embrace this position. If you look closely at his statements formally opposing the, the BTA in California, what he says is that a state can't do this by themselves because they got 49 other states to compete with. So what he's saying is that, you know, look, California is operating in a comparative environment. One state can't do it. And then he's leaving the other part elliptical, which is, well, the, the federal government needs to do this. And I think that you can expect him to embrace that position by 2028."
+    },
+    {
+      "id": 122,
+      "chunk": "chunk2",
+      "relative_start": 2243.46,
+      "relative_end": 2338.88,
+      "absolute_start": 4643.46,
+      "absolute_end": 4738.88,
+      "model_speaker_guess": "David Friedberg",
+      "text": "There is a way out here from the socialist movement. It's a, it's very simple. If you think from first principles, what does an American want? What does an American family want? What, what do mothers and fathers in this country want? They want to educate their kids. They want to be able to own a nice home. They want to have decent healthcare. They want to have healthy food. It's a very small subset of issues. And AI is uniquely positioned to solve a lot of these problems. And entrepreneurs can come in and take these highly regulated industries, if we're allowed to, participate in them. Education, we have to break this accreditation, you know, cartel. And then housing, we have to break these regulations, like the great state of Texas, Nevada, and Florida have. And then, you know, when it comes to healthcare, this is where AI could have a tremendous impact, and entrepreneurs can have a tremendous impact in lowering the cost of healthcare and letting people solve for that with their own, you know, healthcare-led, you know, self-led healthcare. These are the problems. If you solve for these problems, people's homes, people's health, people's education of their kids, we're going to solve these problems, and we don't need to go to socialism and seize people's assets. That's what entrepreneurs should be doing. That's what entrepreneurs should be working on. And that's what, where the government can help. That's where Trump's uniquely qualified. He is the regulatory breaker. He got nuclear back on the agenda. No other president had gotten nuclear back on the agenda for America. He can get housing back on the agenda. We have to break those things and not start foreign wars, my earlier point, and start creating houses for Americans. Another amazing episode of the All-In Podcast. Gentlemen."
+    },
+    {
+      "id": 123,
+      "chunk": "chunk2",
+      "relative_start": 2338.88,
+      "relative_end": 2341.73,
+      "absolute_start": 4738.88,
+      "absolute_end": 4741.73,
+      "model_speaker_guess": "Altimeter",
+      "text": "So maybe you always give yourself the last word, J Cal."
+    },
+    {
+      "id": 124,
+      "chunk": "chunk2",
+      "relative_start": 2341.73,
+      "relative_end": 2352.02,
+      "absolute_start": 4741.73,
+      "absolute_end": 4752.02,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Well, I go last. If you'd like, you can moderate, and I'll go first. But I always go last. But you can, you, you could give me a round of applause, or you could throw a tomato. Go ahead, Sacks. It doesn't matter."
+    },
+    {
+      "id": 125,
+      "chunk": "chunk2",
+      "relative_start": 2352.02,
+      "relative_end": 2353.64,
+      "absolute_start": 4752.02,
+      "absolute_end": 4753.639999999999,
+      "model_speaker_guess": "Altimeter",
+      "text": "It's all good. It's all good. Go for it."
+    },
+    {
+      "id": 126,
+      "chunk": "chunk2",
+      "relative_start": 2353.64,
+      "relative_end": 2360.06,
+      "absolute_start": 4753.639999999999,
+      "absolute_end": 4760.0599999999995,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "All right, everybody. Another amazing episode of the All-In Podcast. Thank you, bestie Brad, for joining us."
+    },
+    {
+      "id": 127,
+      "chunk": "chunk2",
+      "relative_start": 2360.06,
+      "relative_end": 2361.92,
+      "absolute_start": 4760.0599999999995,
+      "absolute_end": 4761.92,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Thank you, bestie Brad. Love you, boys."
+    },
+    {
+      "id": 128,
+      "chunk": "chunk2",
+      "relative_start": 2361.92,
+      "relative_end": 2364.02,
+      "absolute_start": 4761.92,
+      "absolute_end": 4764.02,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Bye-bye."
+    },
+    {
+      "id": 129,
+      "chunk": "chunk2",
+      "relative_start": 2364.02,
+      "relative_end": 2366.87,
+      "absolute_start": 4764.02,
+      "absolute_end": 4766.87,
+      "model_speaker_guess": "Brad Gerstner",
+      "text": "We'll let your winners ride."
+    },
+    {
+      "id": 130,
+      "chunk": "chunk2",
+      "relative_start": 2366.87,
+      "relative_end": 2371.19,
+      "absolute_start": 4766.87,
+      "absolute_end": 4771.1900000000005,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Rain Man David Sacks."
+    },
+    {
+      "id": 131,
+      "chunk": "chunk2",
+      "relative_start": 2371.19,
+      "relative_end": 2375.27,
+      "absolute_start": 4771.1900000000005,
+      "absolute_end": 4775.27,
+      "model_speaker_guess": "Altimeter",
+      "text": "And instead, we open source it to the fans, and they've just gone crazy with it."
+    },
+    {
+      "id": 132,
+      "chunk": "chunk2",
+      "relative_start": 2375.27,
+      "relative_end": 2375.87,
+      "absolute_start": 4775.27,
+      "absolute_end": 4775.87,
+      "model_speaker_guess": "Chamath Palihapitiya",
+      "text": "Love you, Sacks."
+    },
+    {
+      "id": 133,
+      "chunk": "chunk2",
+      "relative_start": 2375.87,
+      "relative_end": 2378.63,
+      "absolute_start": 4775.87,
+      "absolute_end": 4778.63,
+      "model_speaker_guess": "David Friedberg",
+      "text": "I'm the queen of Kinoah."
+    },
+    {
+      "id": 134,
+      "chunk": "chunk2",
+      "relative_start": 2384.09,
+      "relative_end": 2386.82,
+      "absolute_start": 4784.09,
+      "absolute_end": 4786.82,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Besties are back."
+    },
+    {
+      "id": 135,
+      "chunk": "chunk2",
+      "relative_start": 2386.82,
+      "relative_end": 2389.46,
+      "absolute_start": 4786.82,
+      "absolute_end": 4789.46,
+      "model_speaker_guess": "Altimeter",
+      "text": "That is my dog taking a notice in your driveway, Sacks."
+    },
+    {
+      "id": 136,
+      "chunk": "chunk2",
+      "relative_start": 2394.53,
+      "relative_end": 2402.54,
+      "absolute_start": 4794.530000000001,
+      "absolute_end": 4802.54,
+      "model_speaker_guess": "David Friedberg",
+      "text": "We should all just get a room and just have one big Hugh Georgie, because they're all just, it's like this, like sexual tension that they just need to release somehow."
+    },
+    {
+      "id": 137,
+      "chunk": "chunk2",
+      "relative_start": 2402.54,
+      "relative_end": 2406.23,
+      "absolute_start": 4802.54,
+      "absolute_end": 4806.23,
+      "model_speaker_guess": "David Friedberg",
+      "text": "Wet your beak. Wet your beak."
+    },
+    {
+      "id": 138,
+      "chunk": "chunk2",
+      "relative_start": 2406.23,
+      "relative_end": 2407.82,
+      "absolute_start": 4806.23,
+      "absolute_end": 4807.82,
+      "model_speaker_guess": "Altimeter",
+      "text": "What?"
+    },
+    {
+      "id": 139,
+      "chunk": "chunk2",
+      "relative_start": 2407.82,
+      "relative_end": 2409.26,
+      "absolute_start": 4807.82,
+      "absolute_end": 4809.26,
+      "model_speaker_guess": "David Friedberg",
+      "text": "We need to get merch."
+    }
+  ]
+}

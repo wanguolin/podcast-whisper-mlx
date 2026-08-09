@@ -1,0 +1,10 @@
+.venv/
+.cache/
+
+__pycache__/
+*.py[cod]
+
+# Local source and intermediate audio can be regenerated from the scripts.
+*.wav
+
+.DS_Store
