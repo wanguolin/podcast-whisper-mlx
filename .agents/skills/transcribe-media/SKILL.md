@@ -1,13 +1,13 @@
 ---
 name: transcribe-media
-description: Convert local audio or video into calibrated, reviewable Markdown using the project's MLX transcription environment. Use for audio/video transcription, video audio extraction, long-recording silence-aware chunking, Chinese transcript correction, English transcript correction followed by Chinese translation, bilingual transcript delivery, or best-effort speaker separation in this project.
+description: Download remote media URLs or process local audio and video into calibrated, reviewable Markdown using the project's MLX transcription environment. Use for podcast or direct media URLs, audio/video transcription, video audio extraction, long-recording silence-aware chunking, Chinese transcript correction, English transcript correction followed by Chinese translation, bilingual transcript delivery, or best-effort speaker separation in this project.
 ---
 
 # Transcribe Media
 
-Produce evidence-preserving transcripts from local media. Prefer reliable text over confident-looking speaker names.
+Produce evidence-preserving transcripts from remote or local media. Prefer reliable text over confident-looking speaker names.
 
-## Set paths and inspect the input
+## Set paths and resolve the input
 
 Run from the project directory:
 
@@ -16,19 +16,31 @@ TRANSCRIBE_SKILL_DIR="$PWD/.agents/skills/transcribe-media"
 TRANSCRIBE_PYTHON="$PWD/.venv/bin/python"
 ```
 
-Require `ffmpeg`, `ffprobe`, and the project `.venv` with `mlx-audio`. Resolve the input to an absolute path. Put each run in a new `outputs/<media-stem>-transcript/` directory; do not overwrite unrelated prior runs.
+Require `ffmpeg`, `ffprobe`, and the project `.venv` with `mlx-audio`. Put each run in a new `outputs/<media-stem>-transcript/` directory; do not overwrite unrelated prior runs.
+
+For an `http://` or `https://` audio/video URL, download it before preparation:
+
+```bash
+"$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/download_media.py" \
+  "https://example.com/episode.mp3" \
+  --output-dir "outputs/<media-stem>-transcript/source"
+```
+
+Read the returned `path` from stdout or `source/download.json` and use that absolute local path below. The downloader follows validated HTTP(S) redirects, rejects private/local hosts by default, refuses overwrite, limits the response to 4 GiB, records a SHA-256 hash, and redacts URL queries from its manifest. Use `--allow-private-hosts` only for an explicitly authorized internal or local source. If a webpage URL does not return media bytes, resolve the page to a direct media URL with an appropriate site-specific downloader before continuing.
+
+For local input, resolve the file to an absolute path and continue directly.
 
 ## Prepare audio and silence-aware chunks
 
 Run:
 
 ```bash
-python3 "$TRANSCRIBE_SKILL_DIR/scripts/prepare_media.py" \
+"$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/prepare_media.py" \
   "/absolute/path/to/input" \
   --output-dir "outputs/<media-stem>-transcript/prepared"
 ```
 
-This command detects the media type with `ffprobe`, extracts the first audio stream from video, converts it to 16 kHz mono PCM, and writes a manifest. Media longer than 30 minutes is split near the midpoint of long silences. Each chunk has an 8-second decoded overlap but a non-overlapping core interval.
+This command detects the downloaded or local media type with `ffprobe`. For video, it extracts the first audio stream; for all supported inputs, it converts the audio to Whisper-compatible 16 kHz mono PCM and writes a manifest. Media longer than 30 minutes is split near the midpoint of long silences. Each chunk has an 8-second decoded overlap but a non-overlapping core interval.
 
 Keep the defaults unless the recording demands otherwise:
 

@@ -1,4 +1,4 @@
 interface:
   display_name: "媒体转写与双语校准"
-  short_description: "音视频抽音、长音频静音分块、双语校准翻译及说话人整理流程"
-  default_prompt: "Use $transcribe-media to transcribe this audio or video, calibrate the source text, and produce reviewable Chinese or bilingual Markdown."
+  short_description: "媒体链接下载、音视频抽音、长音频分块、双语校准及说话人整理"
+  default_prompt: "Use $transcribe-media to download or open this media, transcribe and calibrate it, and produce reviewable Chinese or bilingual Markdown."

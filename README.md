@@ -1,6 +1,6 @@
 # Podcast Whisper MLX
 
-Local audio and video transcription for Apple Silicon, with silence-aware chunking, MLX-accelerated speech recognition, conservative speaker diarization, transcript calibration, and bilingual Markdown output.
+Local and URL-based audio and video transcription for Apple Silicon, with validated media downloads, silence-aware chunking, MLX-accelerated speech recognition, conservative speaker diarization, transcript calibration, and bilingual Markdown output.
 
 The repository grew out of two practical requirements:
 
@@ -18,7 +18,7 @@ The default production path uses MLX Whisper for text. MOSS-Transcribe-Diarize i
 - Calibrated English, Chinese translation, and bilingual Markdown for English sources
 - A separate review list for uncertain names, numbers, quotations, and inaudible passages
 
-Video files are accepted directly. The preparation script extracts the first audio stream before transcription.
+Direct HTTP(S) media URLs can be downloaded into a run directory. Video files are accepted directly, and the preparation script extracts the first audio stream before transcription.
 
 ## Tested environment
 
@@ -104,6 +104,7 @@ When Codex is started from this repository, invoke it with a request such as:
 
 ```text
 $transcribe-media Transcribe and calibrate /absolute/path/to/interview.mp4.
+$transcribe-media Download and transcribe https://example.com/episode.mp3.
 ```
 
 The skill contains the workflow, scripts, calibration rules, speaker identity policy, and reviewed JSON example.
@@ -120,7 +121,21 @@ TRANSCRIBE_RUN_DIR="outputs/example-transcript"
 
 Use a new run directory for every source file. The scripts refuse to replace final artifacts unless `--overwrite` is passed explicitly.
 
-### Step 1: Extract and prepare audio
+### Step 1: Resolve the input
+
+For a direct HTTP(S) audio or video URL, download it first:
+
+```bash
+"$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/download_media.py" \
+  "https://example.com/episode.mp3" \
+  --output-dir "$TRANSCRIBE_RUN_DIR/source"
+```
+
+The command writes the original media plus `source/download.json`, including the local path, byte count, content type, and SHA-256 hash. It validates each redirect, rejects private/local hosts by default, limits downloads to 4 GiB, refuses overwrite, and strips query parameters from recorded URLs. A webpage URL that does not return media bytes requires a suitable site-specific downloader to resolve it to media first.
+
+For local media, start with its absolute path.
+
+### Step 2: Extract and prepare audio
 
 ```bash
 "$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/prepare_media.py" \
@@ -140,7 +155,7 @@ The script:
 
 If no suitable silence exists in the allowed window, the script makes a bounded fallback cut and records a warning. Inspect that join before publication.
 
-### Step 2: Transcribe the preferred text with MLX Whisper
+### Step 3: Transcribe the preferred text with MLX Whisper
 
 ```bash
 "$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/transcribe_chunks.py" \
@@ -162,7 +177,7 @@ whisper/chunks/chunk-*.json
 
 Treat prompt terms as spelling hints. Do not seed uncertain names or guessed facts.
 
-### Step 3: Add anonymous speaker labels when needed
+### Step 4: Add anonymous speaker labels when needed
 
 Skip this step for narration or when speaker separation would add more uncertainty than value.
 
@@ -184,7 +199,7 @@ Then assign the anonymous MOSS turns to the preferred Whisper segments:
 
 The diarization script discards generated names, assigns chunk-local anonymous labels, and reconciles adjacent chunks only when their shared audio supports the mapping. Labels such as `SPK01` are not real identities.
 
-### Step 4: Calibrate and translate
+### Step 5: Calibrate and translate
 
 Use the calibration rules in:
 
@@ -208,7 +223,7 @@ Editorial order matters:
 
 The raw machine transcript must remain unchanged as an audit artifact.
 
-### Step 5: Render final Markdown
+### Step 6: Render final Markdown
 
 ```bash
 "$TRANSCRIBE_PYTHON" "$TRANSCRIBE_SKILL_DIR/scripts/render_markdown.py" \
