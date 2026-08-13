@@ -79,9 +79,7 @@ def main() -> None:
         "> 未经人工逐句校对；没有说话人标签。已删除空片段、无效时间轴和结尾音乐上的重复幻觉。",
         "",
     ]
-    md_lines.extend(
-        f"- `{clock(item['start'])}–{clock(item['end'])}` {item['text']}" for item in kept
-    )
+    md_lines.extend(item["text"] for item in kept)
     args.output_prefix.with_suffix(".md").write_text("\n".join(md_lines) + "\n", encoding="utf-8")
 
     srt_blocks = []

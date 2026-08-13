@@ -100,7 +100,6 @@ def main() -> None:
         )
         for segment in segments:
             handle.write(
-                f"[{timestamp(segment['start'])}] "
                 f"**{segment['speaker']}：** {segment['text']}\n\n"
             )
 

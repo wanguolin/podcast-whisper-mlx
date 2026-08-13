@@ -73,6 +73,8 @@ Inspect these failure signals before editing:
 
 Set an explicit spoken-content cutoff only after inspecting the audio around the end.
 
+`transcript.raw.json` retains the auditable timestamp data. `transcript.raw.md` contains spoken content only, with no timecodes, so it can be used directly for text analysis. If timestamped subtitles are needed for video editing, use the sibling `audio-to-video-maker` skill to create SRT.
+
 ## Add speakers only when useful
 
 Whisper provides the preferred text but no speakers. For interviews, panels, or podcasts where speaker turns matter, run chunked MOSS:
@@ -122,9 +124,11 @@ After producing `transcript.reviewed.json`, run:
 
 For English, deliver `transcript.en.md`, `transcript.zh.md`, `transcript.bilingual.md`, and `transcript.review.md`. For Chinese, deliver `transcript.zh.md` and `transcript.review.md`. Always retain `transcript.raw.json` and `transcript.raw.md` beside the final files.
 
+Keep every Markdown output free of timecodes. Preserve timing in the raw/reviewed JSON for audit and in SRT when a video-editing handoff is requested.
+
 Before handoff, verify:
 
-1. The final timestamp reaches the last spoken content and never exceeds media duration.
+1. The final JSON or SRT timestamp reaches the last spoken content and never exceeds media duration.
 2. Segment timestamps increase and every end is later than its start.
 3. English and Chinese segments remain one-to-one aligned.
 4. Every named speaker mapping has an evidence note; anonymous labels remain anonymous otherwise.

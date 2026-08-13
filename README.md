@@ -1,6 +1,6 @@
 # Podcast Whisper MLX
 
-Local and URL-based audio and video transcription for Apple Silicon, with validated media downloads, silence-aware chunking, MLX-accelerated speech recognition, conservative speaker diarization, transcript calibration, and bilingual Markdown output.
+Local and URL-based audio and video transcription for Apple Silicon, with validated media downloads, silence-aware chunking, MLX-accelerated speech recognition, conservative speaker diarization, transcript calibration, content-only Markdown, and timestamped SRT editing handoffs.
 
 The repository grew out of two practical requirements:
 
@@ -11,12 +11,13 @@ The default production path uses MLX Whisper for text. MOSS-Transcribe-Diarize i
 
 ## Supported outputs
 
-- Raw timestamped JSON and Markdown from MLX Whisper
+- Raw timestamped JSON plus timestamp-free content Markdown from MLX Whisper
 - Best-effort anonymous speaker labels from chunked MOSS
 - Speaker labels assigned back to the preferred Whisper text
 - Calibrated Chinese Markdown for Chinese sources
 - Calibrated English, Chinese translation, and bilingual Markdown for English sources
 - A separate review list for uncertain names, numbers, quotations, and inaudible passages
+- Matching audio, timestamped SRT, and word-alignment JSON for video editing
 
 Direct HTTP(S) media URLs can be downloaded into a run directory. Video files are accepted directly, and the preparation script extracts the first audio stream before transcription.
 
@@ -94,10 +95,11 @@ The first transcription still needs network access to download models. Later run
 
 ## Codex project skill
 
-The project includes a repository-scoped Codex skill at:
+The project includes repository-scoped Codex skills at:
 
 ```text
 .agents/skills/transcribe-media/
+.agents/skills/audio-to-video-maker/
 ```
 
 When Codex is started from this repository, invoke it with a request such as:
@@ -105,9 +107,10 @@ When Codex is started from this repository, invoke it with a request such as:
 ```text
 $transcribe-media Transcribe and calibrate /absolute/path/to/interview.mp4.
 $transcribe-media Download and transcribe https://example.com/episode.mp3.
+$audio-to-video-maker Create an editing-ready SRT handoff from /absolute/path/to/narration.wav.
 ```
 
-The skill contains the workflow, scripts, calibration rules, speaker identity policy, and reviewed JSON example.
+The transcription skill contains the calibration and speaker workflow. The editing skill produces matching audio, timestamped SRT, and optional word-level alignment JSON while preserving verbatim speech.
 
 ## Basic workflow
 
@@ -176,6 +179,8 @@ whisper/chunks/chunk-*.json
 ```
 
 Treat prompt terms as spelling hints. Do not seed uncertain names or guessed facts.
+
+`transcript.raw.json` retains timestamps for audit. `transcript.raw.md` contains only the spoken content and no timecodes, making it suitable for text analysis.
 
 ### Step 4: Add anonymous speaker labels when needed
 
@@ -247,6 +252,12 @@ Chinese sources produce:
 final/transcript.zh.md
 final/transcript.review.md
 ```
+
+All Markdown outputs are timestamp-free content documents. Use SRT from `audio-to-video-maker` when video cuts require timecodes; JSON continues to retain machine-readable timing for audit and alignment.
+
+## Editing handoff workflow
+
+Use the `audio-to-video-maker` skill when a video or subtitle workflow needs a matching audio file and timestamped SRT. It reuses the prepared audio and Whisper JSON, optionally requests model-derived word alignment, and validates SRT timing against the delivered audio. Markdown remains a separate timestamp-free content-analysis artifact.
 
 ## Long-recording design
 

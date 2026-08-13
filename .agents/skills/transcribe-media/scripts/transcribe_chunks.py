@@ -16,16 +16,10 @@ os.environ.setdefault("HF_HOME", str(PROJECT_ROOT / ".cache" / "huggingface"))
 import mlx.core as mx
 from mlx_audio.stt import load
 
+from render_raw_markdown import render_content_markdown
+
 
 DEFAULT_MODEL = "mlx-community/whisper-large-v3-turbo-asr-fp16"
-
-
-def timestamp(seconds: float) -> str:
-    milliseconds = max(0, round(seconds * 1000))
-    hours, remainder = divmod(milliseconds, 3_600_000)
-    minutes, remainder = divmod(remainder, 60_000)
-    secs, millis = divmod(remainder, 1000)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d}.{millis:03d}"
 
 
 def compact_segment(item: Any) -> dict[str, Any]:
@@ -34,6 +28,7 @@ def compact_segment(item: Any) -> dict[str, Any]:
         "start",
         "end",
         "text",
+        "words",
         "temperature",
         "avg_logprob",
         "compression_ratio",
@@ -50,6 +45,11 @@ def main() -> None:
     parser.add_argument("--language", default="auto", help="ISO code such as en/zh, or auto")
     parser.add_argument("--prompt", default="")
     parser.add_argument("--prompt-file", type=Path)
+    parser.add_argument(
+        "--word-timestamps",
+        action="store_true",
+        help="Request cross-attention/DTW word timestamps from Whisper.",
+    )
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
 
@@ -96,7 +96,7 @@ def main() -> None:
             task="transcribe",
             initial_prompt=prompt or None,
             chunk_duration=30.0,
-            word_timestamps=False,
+            word_timestamps=args.word_timestamps,
             condition_on_previous_text=True,
             verbose=False,
         )
@@ -141,6 +141,22 @@ def main() -> None:
                 rejected["past_media_end"] += 1
                 continue
             segment = {key: value for key, value in item.items() if key not in {"id", "start", "end"}}
+            if args.word_timestamps:
+                global_words = []
+                for word in item.get("words", []) or []:
+                    word_start = float(chunk["decode_start"]) + float(word.get("start", 0.0))
+                    word_end = float(chunk["decode_start"]) + float(word.get("end", 0.0))
+                    if word_end <= word_start or word_start < 0 or word_start >= duration:
+                        rejected["invalid_word_time"] = rejected.get("invalid_word_time", 0) + 1
+                        continue
+                    global_words.append(
+                        {
+                            **word,
+                            "start": word_start,
+                            "end": min(word_end, duration),
+                        }
+                    )
+                segment["words"] = global_words
             segment.update(
                 {
                     "id": len(merged_segments) + 1,
@@ -183,6 +199,9 @@ def main() -> None:
             "peak_mlx_memory_gb": mx.get_peak_memory() / 1e9,
             "chunk_count": len(chunks),
             "segment_count": len(merged_segments),
+            "word_timestamp_count": sum(
+                len(item.get("words", []) or []) for item in merged_segments
+            ),
             "rejected": rejected,
             "chunks": chunk_metrics,
         },
@@ -190,14 +209,10 @@ def main() -> None:
     }
     combined_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
-    markdown = [
-        "# Raw machine transcript",
-        "",
-        "> Uncalibrated MLX Whisper output. Speaker labels are not available at this stage.",
-        "",
-    ]
-    markdown.extend(f"- `{timestamp(item['start'])}` {item['text']}" for item in merged_segments)
-    (output_dir / "transcript.raw.md").write_text("\n".join(markdown) + "\n", encoding="utf-8")
+    (output_dir / "transcript.raw.md").write_text(
+        render_content_markdown(payload),
+        encoding="utf-8",
+    )
     print(json.dumps(payload["metrics"], ensure_ascii=False, indent=2))
 
 

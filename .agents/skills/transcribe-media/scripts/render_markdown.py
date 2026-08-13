@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Render calibrated transcript JSON into reviewable Markdown documents."""
+"""Render calibrated transcript JSON into timestamp-free content Markdown."""
 
 from __future__ import annotations
 
@@ -7,14 +7,6 @@ import argparse
 import json
 from pathlib import Path
 from typing import Any
-
-
-def timestamp(seconds: float) -> str:
-    total = max(0, round(seconds * 1000))
-    hours, remainder = divmod(total, 3_600_000)
-    minutes, remainder = divmod(remainder, 60_000)
-    secs, millis = divmod(remainder, 1000)
-    return f"{hours:02d}:{minutes:02d}:{secs:02d}.{millis:03d}"
 
 
 def label(segment: dict[str, Any], speakers: dict[str, str]) -> str:
@@ -28,7 +20,7 @@ def header(title: str, note: str) -> list[str]:
 
 def line(segment: dict[str, Any], text: str, speakers: dict[str, str]) -> str:
     uncertainty = " ⚠️" if segment.get("uncertain") else ""
-    return f"[{timestamp(float(segment['start']))}] **{label(segment, speakers)}：** {text}{uncertainty}"
+    return f"**{label(segment, speakers)}：** {text}{uncertainty}"
 
 
 def main() -> None:
@@ -74,7 +66,7 @@ def main() -> None:
             chinese.extend([line(segment, zh_text, speakers), ""])
             bilingual.extend(
                 [
-                    f"### {timestamp(float(segment['start']))} · {label(segment, speakers)}",
+                    f"### {label(segment, speakers)}",
                     "",
                     en_text,
                     "",
@@ -96,7 +88,7 @@ def main() -> None:
     if unresolved:
         for item in unresolved:
             notes.append(
-                f"- `{timestamp(float(item.get('start', 0.0)))}` {item.get('type', '待确认')}：{item.get('note', '')}"
+                f"- {item.get('type', '待确认')}：{item.get('note', '')}"
             )
     else:
         notes.append("- 未记录待确认项；这不等于已经完成人工逐句核验。")

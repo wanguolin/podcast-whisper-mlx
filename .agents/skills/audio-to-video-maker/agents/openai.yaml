@@ -1,0 +1,4 @@
+interface:
+  display_name: "Audio to Video Maker"
+  short_description: "Create editing-ready raw SRT and word timestamps"
+  default_prompt: "Use $audio-to-video-maker to turn this recording into raw SRT, word-level JSON, and a matching audio handoff."
