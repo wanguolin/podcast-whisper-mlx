@@ -13,9 +13,6 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[4]
 os.environ.setdefault("HF_HOME", str(PROJECT_ROOT / ".cache" / "huggingface"))
 
-import mlx.core as mx
-from mlx_audio.stt import load
-
 from render_raw_markdown import render_content_markdown
 
 
@@ -37,6 +34,16 @@ def compact_segment(item: Any) -> dict[str, Any]:
     return {key: getattr(item, key, item.get(key) if isinstance(item, dict) else None) for key in keys if (isinstance(item, dict) and key in item) or hasattr(item, key)}
 
 
+def configure_model_network(allow_download: bool) -> None:
+    """Keep model loading offline unless the caller explicitly opts in."""
+    if allow_download:
+        os.environ.pop("HF_HUB_OFFLINE", None)
+        os.environ.pop("TRANSFORMERS_OFFLINE", None)
+        return
+    os.environ["HF_HUB_OFFLINE"] = "1"
+    os.environ["TRANSFORMERS_OFFLINE"] = "1"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("manifest", type=Path)
@@ -46,12 +53,21 @@ def main() -> None:
     parser.add_argument("--prompt", default="")
     parser.add_argument("--prompt-file", type=Path)
     parser.add_argument(
+        "--allow-model-download",
+        action="store_true",
+        help="Allow model-network access. Use only after explicit user approval for this model download.",
+    )
+    parser.add_argument(
         "--word-timestamps",
         action="store_true",
         help="Request cross-attention/DTW word timestamps from Whisper.",
     )
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
+
+    configure_model_network(args.allow_model_download)
+    import mlx.core as mx
+    from mlx_audio.stt import load
 
     manifest_path = args.manifest.expanduser().resolve()
     output_dir = args.output_dir.expanduser().resolve()
@@ -72,7 +88,15 @@ def main() -> None:
     chunk_results_dir.mkdir(parents=True, exist_ok=True)
 
     load_started = time.perf_counter()
-    model = load(args.model)
+    try:
+        model = load(args.model)
+    except Exception as exc:
+        if not args.allow_model_download:
+            raise SystemExit(
+                f"Model is unavailable from the offline project cache: {args.model}. "
+                "Obtain explicit user approval before retrying with --allow-model-download."
+            ) from exc
+        raise
     mx.synchronize()
     load_seconds = time.perf_counter() - load_started
     mx.reset_peak_memory()
@@ -190,6 +214,7 @@ def main() -> None:
         "source_file": manifest["input"]["path"],
         "source_language": detected_language or (None if args.language == "auto" else args.language),
         "model": args.model,
+        "model_network_access": args.allow_model_download,
         "prompt": prompt,
         "metrics": {
             "media_duration_seconds": duration,

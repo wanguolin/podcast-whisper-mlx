@@ -21,9 +21,6 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[4]
 os.environ.setdefault("HF_HOME", str(PROJECT_ROOT / ".cache" / "huggingface"))
 
-import mlx.core as mx
-from mlx_audio.stt import load
-
 
 DEFAULT_MODEL = "OpenMOSS-Team/MOSS-Transcribe-Diarize"
 RAW_RECORD = re.compile(
@@ -34,6 +31,16 @@ RAW_RECORD = re.compile(
     re.DOTALL,
 )
 LABEL_PREFIX = re.compile(r"^\[(?P<label>[^\]]+)\]\s*")
+
+
+def configure_model_network(allow_download: bool) -> None:
+    """Keep model loading offline unless the caller explicitly opts in."""
+    if allow_download:
+        os.environ.pop("HF_HUB_OFFLINE", None)
+        os.environ.pop("TRANSFORMERS_OFFLINE", None)
+        return
+    os.environ["HF_HUB_OFFLINE"] = "1"
+    os.environ["TRANSFORMERS_OFFLINE"] = "1"
 
 
 class UnionFind:
@@ -197,8 +204,17 @@ def main() -> None:
     parser.add_argument("--model", default=DEFAULT_MODEL)
     parser.add_argument("--vocabulary", default="", help="Proper nouns as transcription hints only")
     parser.add_argument("--max-tokens", type=int, default=32768)
+    parser.add_argument(
+        "--allow-model-download",
+        action="store_true",
+        help="Allow model-network access. Use only after explicit user approval for this model download.",
+    )
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
+
+    configure_model_network(args.allow_model_download)
+    import mlx.core as mx
+    from mlx_audio.stt import load
 
     manifest_path = args.manifest.expanduser().resolve()
     output_dir = args.output_dir.expanduser().resolve()
@@ -221,7 +237,15 @@ def main() -> None:
         prompt += " Vocabulary hints for spelling only, never identities: " + args.vocabulary.strip()
 
     load_started = time.perf_counter()
-    model = load(args.model)
+    try:
+        model = load(args.model)
+    except Exception as exc:
+        if not args.allow_model_download:
+            raise SystemExit(
+                f"Model is unavailable from the offline project cache: {args.model}. "
+                "Obtain explicit user approval before retrying with --allow-model-download."
+            ) from exc
+        raise
     mx.synchronize()
     load_seconds = time.perf_counter() - load_started
     mx.reset_peak_memory()
@@ -304,6 +328,7 @@ def main() -> None:
         "speaker_identity_policy": "No generated label is a verified human identity.",
         "source_manifest": str(manifest_path),
         "model": args.model,
+        "model_network_access": args.allow_model_download,
         "prompt": prompt,
         "metrics": {
             "load_seconds": load_seconds,

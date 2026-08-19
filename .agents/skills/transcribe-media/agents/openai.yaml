@@ -1,4 +1,4 @@
 interface:
   display_name: "媒体转写与双语校准"
-  short_description: "媒体链接下载、音视频抽音、长音频分块、双语校准及说话人整理"
-  default_prompt: "Use $transcribe-media to download or open this media, transcribe and calibrate it, and produce reviewable Chinese or bilingual Markdown."
+  short_description: "YouTube 字幕优先自动路由，必要时离线转写并完成双语校准"
+  default_prompt: "Use $transcribe-media to route this YouTube or media source through transcript-first retrieval, ask me only when routing evidence is insufficient, and produce calibrated Chinese or bilingual Markdown without invoking another language model."

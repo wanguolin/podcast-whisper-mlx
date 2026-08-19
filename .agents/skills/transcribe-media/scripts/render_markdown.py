@@ -54,6 +54,7 @@ def main() -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     title = str(metadata.get("title") or args.stem)
     status_note = "机器辅助校准；专名、数字、听不清处和说话人身份仍应人工复核。"
+    content_paragraphs = []
 
     if language == "en":
         english = header(f"{title} — Calibrated English transcript", status_note)
@@ -62,6 +63,7 @@ def main() -> None:
         for segment in segments:
             en_text = str(segment["calibrated"]).strip()
             zh_text = str(segment["zh"]).strip()
+            content_paragraphs.append(zh_text)
             english.extend([line(segment, en_text, speakers), ""])
             chinese.extend([line(segment, zh_text, speakers), ""])
             bilingual.extend(
@@ -80,8 +82,15 @@ def main() -> None:
     else:
         chinese = header(f"{title} — 中文校准稿", status_note)
         for segment in segments:
-            chinese.extend([line(segment, str(segment["calibrated"]).strip(), speakers), ""])
+            zh_text = str(segment["calibrated"]).strip()
+            content_paragraphs.append(zh_text)
+            chinese.extend([line(segment, zh_text, speakers), ""])
         (output_dir / f"{args.stem}.zh.md").write_text("\n".join(chinese) + "\n", encoding="utf-8")
+
+    (output_dir / f"{args.stem}.content.md").write_text(
+        "\n\n".join(content_paragraphs) + "\n",
+        encoding="utf-8",
+    )
 
     notes = header(f"{title} — 复核清单", "只列出仍需确认的内容；不要把推测升级为事实。")
     unresolved = data.get("unresolved", [])

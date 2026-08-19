@@ -96,7 +96,7 @@ class MarkdownOutputTests(unittest.TestCase):
             )
             self.assertEqual(completed.returncode, 0, completed.stderr)
             markdown_files = sorted(output_dir.glob("*.md"))
-            self.assertEqual(len(markdown_files), 4)
+            self.assertEqual(len(markdown_files), 5)
             combined = "\n".join(path.read_text(encoding="utf-8") for path in markdown_files)
             self.assertIn("Corrected sentence.", combined)
             self.assertIn("校准后的句子。", combined)

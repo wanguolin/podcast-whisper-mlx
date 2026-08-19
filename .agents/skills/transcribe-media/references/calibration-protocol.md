@@ -1,14 +1,21 @@
 # Calibration and translation protocol
 
+## Execution boundary
+
+Calibration and translation are performed directly by the active agent. Do not download, install, invoke, or call a separate language model or translation model for this work, whether local or remote. Do not create ad hoc model wrappers to process batches. If the transcript exceeds one context window, process it in smaller editorial batches and validate continuity at every join.
+
+When a publisher or platform transcript is available, preserve it unchanged and treat it as higher-priority text evidence than ASR after verifying that it belongs to the exact episode and covers the delivered media. Timestamped publisher captions should remain the primary time axis unless spot checks reveal material drift or mismatch.
+
 ## Evidence order
 
 Use evidence in this order:
 
 1. The audio around the timestamp, including several seconds before and after.
-2. Repeated usage elsewhere in the same recording.
-3. Episode title, show notes, on-screen text, or user-provided vocabulary.
-4. Primary sources for consequential names, dates, quotations, and figures.
-5. Contextual inference, explicitly marked as inference.
+2. A verified publisher transcript or publisher-provided captions for the exact episode.
+3. Repeated usage elsewhere in the same recording.
+4. Episode title, show notes, on-screen text, or user-provided vocabulary.
+5. Primary sources for consequential names, dates, quotations, and figures.
+6. Contextual inference, explicitly marked as inference.
 
 Do not replace an uncertain machine reading merely because another plausible phrase sounds smoother.
 
